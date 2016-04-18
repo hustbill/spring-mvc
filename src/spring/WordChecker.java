@@ -7,11 +7,11 @@ import java.io.IOException;
 
 public class WordChecker {
 	// a local solution for validate a word
-    public static boolean validWord(String word) {
-        // System.out.println(word);
-        try {
-            BufferedReader in = new BufferedReader(new FileReader(
-                    "/usr/share/dict/web2"));
+    public static boolean validWord(String dictionary, String word) {
+         
+    	try {
+            BufferedReader in = new BufferedReader(
+            		new FileReader(dictionary ));
             String str;
             while ((str = in.readLine()) != null) {
                 if (str.indexOf(word) != -1) {
